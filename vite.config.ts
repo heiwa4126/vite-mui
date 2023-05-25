@@ -9,8 +9,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          r: ["react", "react-dom"],
-          m: ["@emotion/react", "@emotion/styled", "@mui/material"],
+          r: ["react"],
+          d: ["react-dom"],
+          e: ["@emotion/react", "@emotion/styled"],
+          m: ["@mui/material"],
         },
       },
     },

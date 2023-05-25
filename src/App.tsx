@@ -1,3 +1,4 @@
+import ThumbUp from "@mui/icons-material/ThumbUp";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
@@ -32,6 +33,9 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <Button variant="outlined" startIcon={<ThumbUp />}>
+        OK
+      </Button>
     </div>
   );
 }

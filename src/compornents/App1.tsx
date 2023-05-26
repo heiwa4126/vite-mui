@@ -10,7 +10,7 @@ function App1() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="App1">
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -41,7 +41,7 @@ function App1() {
       </Button>
       <Typography>Almost before we knew it, we had left the ground.</Typography>
       <Typography>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利を承認することは</Typography>
-    </>
+    </div>
   );
 }
 

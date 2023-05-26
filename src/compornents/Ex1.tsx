@@ -1,7 +1,14 @@
 /** @jsxImportSource @emotion/react */
-import { Typography } from "@mui/material";
+import { Button, FormControl, InputLabel, MenuItem, Select, Box } from "@mui/material";
 import "./Ex1.css";
 import { css } from "@emotion/react";
+import ReplayIcon from "@mui/icons-material/Replay";
+
+const sx1 = {
+  py: 1.7 / 2,
+  px: 1.8,
+  mb: 0.29,
+};
 
 function Ex1() {
   return (
@@ -11,12 +18,32 @@ function Ex1() {
           color: red;
         `}
       >
+        {/* 普通の要素にはsxが使えない */}
         Hello, world!
       </h1>
-      <Typography>Almost before we knew it, we had left the ground.</Typography>
-      <p>Almost before we knew it, we had left the ground.</p>
-      <Typography>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利を承認することは</Typography>
-      <p>人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利を承認することは</p>
+      <FormControl>
+        <Box>
+          <InputLabel id="demo-simple-select-filled-label">プロジェクト</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={-1}
+            size="small"
+            label="プロジェクト"
+            sx={{ mr: 0.5 }}
+          >
+            <MenuItem value={-1}>
+              <em>- 対象のプロジェクトを選択してください -</em>
+            </MenuItem>
+            <MenuItem value={1}>プロジェクトA</MenuItem>
+            <MenuItem value={2}>プロジェクトB</MenuItem>
+            <MenuItem value={3}>プロジェクトC</MenuItem>
+          </Select>
+          <Button variant="outlined" startIcon={<ReplayIcon />} sx={sx1}>
+            プロジェクト再取得
+          </Button>
+        </Box>
+      </FormControl>
     </>
   );
 }

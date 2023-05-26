@@ -6,8 +6,9 @@ function Nav() {
     <nav>
       <Stack direction="row" spacing={0.8}>
         <Link to="/">Home</Link>
-        <Link to="/ex1">Ex1</Link>
-        <Link to="/types">Types</Link>
+        <Link to="/ex1">ex1</Link>
+        <Link to="/types">types</Link>
+        <Link to="/emotion1">emotion1</Link>
       </Stack>
     </nav>
   );

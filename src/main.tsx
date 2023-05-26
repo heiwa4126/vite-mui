@@ -11,6 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { HashRouter as Router } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 
@@ -33,6 +34,8 @@ function AppMUI() {
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <AppMUI />
+    <Router>
+      <AppMUI />
+    </Router>
   </React.StrictMode>
 );

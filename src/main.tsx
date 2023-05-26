@@ -8,14 +8,31 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
+function AppMUI() {
+  const apptheme = createTheme({
+    typography: {
+      fontFamily: ["Roboto", '"Noto Sans JP"', "Helvetica", "Arial", "sans-serif"].join(","),
+    },
+  });
+
+  return (
+    <>
+      <CssBaseline />
+      <ThemeProvider theme={apptheme}>
+        <App />
+      </ThemeProvider>
+    </>
+  );
+}
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <CssBaseline />
-    <App />
+    <AppMUI />
   </React.StrictMode>
 );

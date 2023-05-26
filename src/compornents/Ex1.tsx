@@ -1,8 +1,7 @@
-/** @jsxImportSource @emotion/react */
-import { Button, FormControl, InputLabel, MenuItem, Select, Box, Typography } from "@mui/material";
-import "./Ex1.css";
-import { css } from "@emotion/react";
+import data from "./projects.json";
 import ReplayIcon from "@mui/icons-material/Replay";
+import { Box, Button, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Typography } from "@mui/material";
+import { useState } from "react";
 
 const sx1 = {
   py: 1.7 / 2,
@@ -10,28 +9,44 @@ const sx1 = {
   mb: 0.29,
 };
 
+interface Project {
+  id: number;
+  name: string;
+}
 
+function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }) {
+  const [value, setValue] = useState(-1);
 
+  const handleChange = (event: SelectChangeEvent<typeof value>) => {
+    const newValue = event.target.value;
+    if (typeof newValue === "string") return;
+    setValue(newValue);
+    if (newValue >= 0) {
+      onSelect(data.pjList[newValue] as Project);
+    }
+  };
 
-function Projects() {
   return (
     <FormControl>
       <Box>
         <InputLabel id="project-label">プロジェクト</InputLabel>
         <Select
+          onChange={handleChange}
           labelId="project-label"
-          id="demo-simple-select"
-          value={-1}
+          id="project-select"
+          value={value}
           size="small"
           label="プロジェクト"
-          sx={{ mr: 0.5 }}
+          sx={{ mr: 0.5, minWidth: 360 }}
         >
-          <MenuItem value={-1}>
+          <MenuItem value={-1} key={-1}>
             <em>- 対象のプロジェクトを選択してください -</em>
           </MenuItem>
-          <MenuItem value={1}>プロジェクトA</MenuItem>
-          <MenuItem value={2}>プロジェクトB</MenuItem>
-          <MenuItem value={3}>プロジェクトC</MenuItem>
+          {data?.pjList?.map((project, idx) => (
+            <MenuItem value={idx} key={idx}>
+              {project.name}
+            </MenuItem>
+          ))}
         </Select>
         <Button variant="outlined" startIcon={<ReplayIcon />} sx={sx1}>
           プロジェクト再取得
@@ -42,12 +57,23 @@ function Projects() {
 }
 
 function Ex1() {
+  const [project, setProject] = useState<Project | null>(null);
+
   return (
     <>
       <Typography component="h1" variant="h3" gutterBottom>
         Hello, world!
       </Typography>
-      <Projects />
+      <Project3
+        onSelect={(newProject: Project) => {
+          setProject(newProject);
+        }}
+      />
+      <Typography variant="body1" gutterBottom>
+        ID:{project?.id}
+        <br />
+        NAME: {project?.name}
+      </Typography>
     </>
   );
 }

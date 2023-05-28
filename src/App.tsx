@@ -1,11 +1,10 @@
+import { Container } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import App1 from "./compornents/App1";
-import Ex1 from "./compornents/Ex1";
-import Types from "./compornents/Types";
 import Emotion1 from "./compornents/Emotion1";
-
+import Ex1 from "./compornents/Ex1";
 import Nav from "./compornents/Nav";
-import { Container } from "@mui/material";
+import Types from "./compornents/Types";
 
 function App() {
   return (

@@ -14,7 +14,7 @@ import ReactDOM from "react-dom/client";
 import { HashRouter as Router } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
-import theme from "./theme.ts";
+import theme from "./theme.tsx";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

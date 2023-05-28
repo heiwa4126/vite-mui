@@ -9,7 +9,7 @@ import GridFlex from "./compornents/GridFlex";
 
 function App() {
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="lg">
       <Nav />
       <Routes>
         <Route path="/">

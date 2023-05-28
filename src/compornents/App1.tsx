@@ -19,7 +19,9 @@ function App1() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React + TypeScript + MUI 5</h1>
+      <Typography component="h1" variant="h4" gutterBottom>
+        Vite + React + TypeScript + MUI 5
+      </Typography>
       <Button color="secondary">Secondary</Button>
       <Button variant="contained" color="success">
         Success

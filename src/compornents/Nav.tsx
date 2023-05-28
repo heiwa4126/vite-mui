@@ -10,6 +10,7 @@ function Nav() {
         <Button href="/ex1">ex1</Button>
         <Button href="/types">types</Button>
         <Button href="/emotion1">emotion1</Button>
+        <Button href="/gridflex">grid & flex</Button>
       </Stack>
     </nav>
   );

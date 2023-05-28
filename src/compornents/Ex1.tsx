@@ -1,11 +1,10 @@
-import DoubleArrowOutlinedIcon from "@mui/icons-material/DoubleArrowOutlined";
+import { DoubleArrowOutlined } from "@mui/icons-material";
 import ReplayIcon from "@mui/icons-material/Replay";
 import {
   Box,
   Button,
   CircularProgress,
   FormControl,
-  Grid,
   InputLabel,
   MenuItem,
   Select,
@@ -104,7 +103,7 @@ function Ex1() {
         }}
       />
       <Box mt={1}>
-        <Button variant="contained" endIcon={<DoubleArrowOutlinedIcon />} sx={sx1}>
+        <Button variant="contained" endIcon={<DoubleArrowOutlined />} sx={sx1}>
           もう一度問い合わせ
         </Button>
       </Box>
@@ -114,7 +113,7 @@ function Ex1() {
       </Typography>
       <QABox label="クエリ" content={`ID: ${project?.id}\nNAME: ${project?.name}`} />
       <Box mt={2}>
-        <Button variant="contained" endIcon={<DoubleArrowOutlinedIcon />} sx={sx1}>
+        <Button variant="contained" endIcon={<DoubleArrowOutlined />} sx={sx1}>
           もう一度問い合わせ
         </Button>
       </Box>

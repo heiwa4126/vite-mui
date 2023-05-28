@@ -5,6 +5,7 @@ import Emotion1 from "./compornents/Emotion1";
 import Ex1 from "./compornents/Ex1";
 import Nav from "./compornents/Nav";
 import Types from "./compornents/Types";
+import GridFlex from "./compornents/GridFlex";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="ex1" element={<Ex1 />} />
           <Route path="types" element={<Types />} />
           <Route path="emotion1" element={<Emotion1 />} />
+          <Route path="gridflex" element={<GridFlex />} />
         </Route>
       </Routes>
     </Container>

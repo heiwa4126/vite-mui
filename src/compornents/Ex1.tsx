@@ -5,6 +5,7 @@ import {
   Button,
   CircularProgress,
   FormControl,
+  Grid,
   InputLabel,
   MenuItem,
   Select,
@@ -42,14 +43,14 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
   return (
     <FormControl>
       <Box>
-        <InputLabel id="project-label">プロジェクト</InputLabel>
+        <InputLabel id="project-label">プロジェクト名</InputLabel>
         <Select
           onChange={handleChange}
           labelId="project-label"
           id="project-select"
           value={value}
           size="small"
-          label="プロジェクト"
+          label="プロジェクト名"
           sx={{ mr: 0.5, minWidth: 360 }}
         >
           <MenuItem value={-1} key={-1} color="warning">
@@ -95,7 +96,7 @@ function Ex1() {
   return (
     <>
       <Typography component="h1" variant="h3" gutterBottom>
-        Hello, world!
+        Example 1
       </Typography>
       <Project3
         onSelect={(newProject: Project) => {
@@ -108,7 +109,7 @@ function Ex1() {
         </Button>
       </Box>
       <QABox label="回答" content={`ID: ${project?.id}\nNAME: ${project?.name}`} />
-      <Typography variant="body2" gutterBottom mt={1} mb={0}>
+      <Typography variant="body2" color="warning.main" gutterBottom mt={1} mb={0}>
         ※AIが生成した内容は不正確である場合があります。
       </Typography>
       <QABox label="クエリ" content={`ID: ${project?.id}\nNAME: ${project?.name}`} />

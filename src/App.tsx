@@ -8,7 +8,7 @@ import Types from "./compornents/Types";
 
 function App() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="xl">
       <Nav />
       <Routes>
         <Route path="/">

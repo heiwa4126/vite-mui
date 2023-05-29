@@ -17,9 +17,18 @@ export function H2({ children, ...props }: Omit<TypographyProps<"h2">, "componen
     </Typography>
   );
 }
+
 export function P({ children, ...props }: Omit<TypographyProps<"p">, "component">) {
   return (
     <Typography component="p" variant="body1" {...props}>
+      {children}
+    </Typography>
+  );
+}
+
+export function P2({ children, ...props }: Omit<TypographyProps<"p">, "component">) {
+  return (
+    <Typography component="p" variant="body2" {...props}>
       {children}
     </Typography>
   );

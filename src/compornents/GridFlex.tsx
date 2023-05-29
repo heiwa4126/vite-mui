@@ -1,8 +1,8 @@
-import { Box, Link, SxProps, Theme, Select, Button, MenuItem, InputLabel, FormControl } from "@mui/material";
 import ReplayIcon from "@mui/icons-material/Replay";
+import { Box, Button, FormControl, InputLabel, Link, MenuItem, Select, SxProps, Theme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { ReactNode } from "react";
-import { H1, H2, N, P, S } from "./Common";
+import { H1, H2, N, P, S } from "./Tags";
 
 const sxItem: SxProps<Theme> = {
   border: 1,

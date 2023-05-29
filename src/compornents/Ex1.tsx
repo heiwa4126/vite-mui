@@ -9,18 +9,16 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
+  SxProps,
+  Theme,
   Typography,
+  TypographyProps,
 } from "@mui/material";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
+import { H1, P2 } from "./Tags";
 import data from "./projects.json";
 
-const sx1 = {
-  py: 1.7 / 2,
-  px: 1.8,
-  mb: 0.29,
-};
-
-const sxPreWrap = { whiteSpace: "pre-wrap" };
+const sxPreWrap: SxProps<Theme> = { whiteSpace: "pre-wrap" };
 
 interface Project {
   id: number;
@@ -39,18 +37,19 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
     }
   };
 
+  const label = "プロジェクト名";
   return (
-    <FormControl>
-      <Box>
-        <InputLabel id="project-label">プロジェクト名</InputLabel>
+    <FormControl fullWidth>
+      <Box display="flex">
+        <InputLabel id="project">{label}</InputLabel>
         <Select
+          sx={{ flexGrow: 1 }}
           onChange={handleChange}
-          labelId="project-label"
+          labelId="project"
           id="project-select"
           value={value}
           size="small"
-          label="プロジェクト名"
-          sx={{ mr: 0.5, minWidth: 360 }}
+          label={label}
         >
           <MenuItem value={-1} key={-1} color="warning">
             <em>- 対象のプロジェクトを選択してください -</em>
@@ -61,7 +60,7 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
             </MenuItem>
           ))}
         </Select>
-        <Button variant="outlined" startIcon={<ReplayIcon />} sx={sx1}>
+        <Button variant="outlined" startIcon={<ReplayIcon />} size="small" sx={{ ml: 0.5 }}>
           プロジェクト再取得
         </Button>
       </Box>
@@ -80,11 +79,16 @@ function Spinner() {
   );
 }
 
-function QABox({ label, content }: { label: string; content: string }) {
+interface QABoxProps extends Omit<TypographyProps, "component"> {
+  children: ReactNode;
+  label: string;
+}
+
+function QABox({ children, label, ...props }: QABoxProps) {
   return (
-    <Box component="fieldset" sx={{ borderRadius: 1, mx: -0.1 }}>
+    <Box component="fieldset" borderRadius={1} mx={-0.1} {...props}>
       <legend>{label}</legend>
-      <Box sx={sxPreWrap}>{content}</Box>
+      <Box sx={sxPreWrap}>{children}</Box>
     </Box>
   );
 }
@@ -94,26 +98,24 @@ function Ex1() {
 
   return (
     <>
-      <Typography component="h1" variant="h3" gutterBottom>
-        Example 1
-      </Typography>
+      <H1 gutterBottom>Example 1</H1>
       <Project3
         onSelect={(newProject: Project) => {
           setProject(newProject);
         }}
       />
       <Box mt={1}>
-        <Button variant="contained" endIcon={<DoubleArrowOutlined />} sx={sx1}>
+        <Button variant="contained" endIcon={<DoubleArrowOutlined />}>
           もう一度問い合わせ
         </Button>
       </Box>
-      <QABox label="回答" content={`ID: ${project?.id}\nNAME: ${project?.name}`} />
-      <Typography variant="body2" color="warning.main" gutterBottom mt={1} mb={0}>
+      <QABox label="回答" mt={1}>{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
+      <P2 color="warning.main" mt={1} mb={0}>
         ※AIが生成した内容は不正確である場合があります。
-      </Typography>
-      <QABox label="クエリ" content={`ID: ${project?.id}\nNAME: ${project?.name}`} />
+      </P2>
+      <QABox label="クエリ">{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
       <Box mt={2}>
-        <Button variant="contained" endIcon={<DoubleArrowOutlined />} sx={sx1}>
+        <Button variant="contained" endIcon={<DoubleArrowOutlined />}>
           もう一度問い合わせ
         </Button>
       </Box>

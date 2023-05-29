@@ -1,5 +1,4 @@
-import { Box } from "@mui/material";
-import Typography, { TypographyProps } from "@mui/material/Typography";
+import { Box, Typography, TypographyProps } from "@mui/material";
 import { ReactNode } from "react";
 
 export type TOA = Omit<TypographyProps, "component">;
@@ -44,6 +43,7 @@ export function N({ children }: { children: ReactNode }) {
     </Box>
   );
 }
+
 export function S({ children }: { children: ReactNode }) {
   return (
     <Box component="span" sx={{ fontSize: "85%" }}>

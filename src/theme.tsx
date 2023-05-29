@@ -16,17 +16,17 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Roboto", '"Noto Sans JP"', "Helvetica", "Arial", "sans-serif"].join(","),
   },
-  palette: {
-    primary: {
-      main: "#556cd6",
-    },
-    secondary: {
-      main: "#19857b",
-    },
-    error: {
-      main: red.A400,
-    },
-  },
+  // palette: {
+  //   primary: {
+  //     main: "#556cd6",
+  //   },
+  //   secondary: {
+  //     main: "#19857b",
+  //   },
+  //   error: {
+  //     main: red.A400,
+  //   },
+  // },
   components: {
     MuiLink: {
       defaultProps: {

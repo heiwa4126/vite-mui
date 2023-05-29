@@ -38,7 +38,7 @@ export function P2({ children, ...props }: TO<"p">) {
 
 export function N({ children }: { children: ReactNode }) {
   return (
-    <Box component="span" sx={{ letterSpacing: -5 }}>
+    <Box component="span" letterSpacing={-5}>
       {children}
     </Box>
   );
@@ -46,7 +46,7 @@ export function N({ children }: { children: ReactNode }) {
 
 export function S({ children }: { children: ReactNode }) {
   return (
-    <Box component="span" sx={{ fontSize: "85%" }}>
+    <Box component="span" fontSize={"85%"}>
       {children}
     </Box>
   );

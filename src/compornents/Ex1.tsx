@@ -1,5 +1,4 @@
-import { DoubleArrowOutlined } from "@mui/icons-material";
-import ReplayIcon from "@mui/icons-material/Replay";
+import { DoubleArrowOutlined, Replay as ReplayIcon } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -15,7 +14,7 @@ import {
   TypographyProps,
 } from "@mui/material";
 import { ReactNode, useState } from "react";
-import { H1, P2 } from "./Tags";
+import { H1, P2, TOA } from "./Tags";
 import data from "./projects.json";
 
 const sxPreWrap: SxProps<Theme> = { whiteSpace: "pre-wrap" };
@@ -68,18 +67,18 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
   );
 }
 
-function Spinner() {
+function Spinner({ children, ...props }: TOA) {
   return (
-    <Box display="flex" alignItems="center">
+    <Box display="flex" alignItems="center" {...props}>
       <CircularProgress size="2em" />
       <Typography color="primary" fontWeight={"bold"} ml={1.2} fontSize={15}>
-        Loading...
+        {children}
       </Typography>
     </Box>
   );
 }
 
-interface QABoxProps extends Omit<TypographyProps, "component"> {
+interface QABoxProps extends TOA {
   children: ReactNode;
   label: string;
 }
@@ -114,14 +113,12 @@ function Ex1() {
         ※AIが生成した内容は不正確である場合があります。
       </P2>
       <QABox label="クエリ">{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
-      <Box mt={2}>
+      <Box mt={1.5}>
         <Button variant="contained" endIcon={<DoubleArrowOutlined />}>
           もう一度問い合わせ
         </Button>
       </Box>
-      <Box mt={2}>
-        <Spinner />
-      </Box>
+      <Spinner mt={2}>Loading...</Spinner>
     </>
   );
 }

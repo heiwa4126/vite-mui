@@ -12,3 +12,7 @@ ReactでMUI (Material UI) の練習として
 出来たSPAは、GitHub Pagesの
 [Vite + React + TypeScript + MUI 5](https://heiwa4126.github.io/vite-mui/)
 を参照。 (gh-pagesブランチの更新がGitHub Actionsのトリガ)
+
+## ロゴ
+
+ロゴ画像は [logoipsum](https://logoipsum.com/artwork/286) にあったやつを InkScapeで色を白くしたものです。

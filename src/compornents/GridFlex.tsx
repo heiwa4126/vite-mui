@@ -1,22 +1,23 @@
 import ReplayIcon from "@mui/icons-material/Replay";
-import { Box, Button, FormControl, InputLabel, Link, MenuItem, Select, SxProps, Theme } from "@mui/material";
+import { Box, Button, FormControl, InputLabel, Link, MenuItem, Select, SxProps, Theme, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { ReactNode } from "react";
 import { H1, H2, N, P, S } from "./Tags";
 
-const sxItem: SxProps<Theme> = {
-  border: 1,
-  borderRadius: 1,
-  py: 0.5,
-  px: 1,
-  backgroundColor: "white",
-};
 const sxGrid: SxProps<Theme> = {
   borderRadius: 1,
   backgroundColor: "lightgrey",
 };
 
 function Item({ children }: { children: ReactNode }) {
+  const theme = useTheme();
+  const sxItem: SxProps<Theme> = {
+    border: 1,
+    borderRadius: 1,
+    py: 0.5,
+    px: 1,
+    backgroundColor: theme.palette.background.default,
+  };
   return <Box sx={sxItem}>{children}</Box>;
 }
 

@@ -16,7 +16,7 @@ const theme = createTheme({
     fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
   },
   palette: {
-    mode: "light",
+    mode: "dark",
   },
   // palette: {
   //   primary: {

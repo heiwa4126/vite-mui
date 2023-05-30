@@ -13,7 +13,10 @@ const LinkBehavior = React.forwardRef<HTMLAnchorElement, Omit<RouterLinkProps, "
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Roboto", '"Noto Sans JP"', "Helvetica", "Arial", "sans-serif"].join(","),
+    fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
+  },
+  palette: {
+    mode: "light",
   },
   // palette: {
   //   primary: {

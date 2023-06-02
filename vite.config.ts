@@ -9,7 +9,8 @@ export default ({ mode }) => {
 
   return defineConfig({
     plugins: [react(), ViteMinifyPlugin({})],
-    base: process.env.VITE_BASE_URL || "/",
+    // base: process.env.VITE_BASE_URL || "/",
+    base: process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "./", // for GitHUb Actions
     build: {
       rollupOptions: {
         output: {

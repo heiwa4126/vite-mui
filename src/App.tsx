@@ -1,5 +1,5 @@
 import { CssBaseline, Container, AppBar, Box } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { Route, Routes } from "react-router-dom";
 import App1 from "./components/App1";
 import Types from "./components/Types";

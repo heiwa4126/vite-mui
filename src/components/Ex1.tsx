@@ -1,4 +1,6 @@
-import { DoubleArrowOutlined, Replay as ReplayIcon } from "@mui/icons-material";
+import ReplayIcon from "@mui/icons-material/Replay";
+import DoubleArrowOutlined from "@mui/icons-material/DoubleArrowOutlined";
+
 import {
   Box,
   Button,

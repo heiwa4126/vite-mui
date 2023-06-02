@@ -15,20 +15,6 @@ const theme = createTheme({
   typography: {
     fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
   },
-  palette: {
-    mode: "dark",
-  },
-  // palette: {
-  //   primary: {
-  //     main: "#556cd6",
-  //   },
-  //   secondary: {
-  //     main: "#19857b",
-  //   },
-  //   error: {
-  //     main: red.A400,
-  //   },
-  // },
   components: {
     MuiLink: {
       defaultProps: {
@@ -40,6 +26,18 @@ const theme = createTheme({
         LinkComponent: LinkBehavior,
       },
     },
+  },
+  palette: {
+    // mode: "dark",
+    // primary: {
+    //   main: "#556cd6",
+    // },
+    // secondary: {
+    //   main: "#19857b",
+    // },
+    // error: {
+    //   main: red.A400,
+    // },
   },
 });
 

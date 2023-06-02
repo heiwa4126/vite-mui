@@ -1,5 +1,4 @@
-import { Box, Typography as T } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Typography as T, Link } from "@mui/material";
 
 function Types() {
   return (
@@ -48,7 +47,7 @@ function Types() {
         overline text
       </T>
       <T variant="body1" gutterBottom mt={4}>
-        from <Link to="https://mui.com/material-ui/react-typography/">React Typography component - Material UI</Link>
+        from <Link href="https://mui.com/material-ui/react-typography/">React Typography component - Material UI</Link>
       </T>
     </Box>
   );

@@ -1,24 +1,40 @@
 import ReplayIcon from "@mui/icons-material/Replay";
-import { Box, Button, FormControl, InputLabel, Link, MenuItem, Select, SxProps, Theme, useTheme } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
-import { ReactNode } from "react";
-import { H1, H2, N, P, S } from "./Tags";
+import { Box, Button, FormControl, InputLabel, Link, MenuItem, Select, SxProps, Theme } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import { H1, H2, N, P, S, TO } from "./Tags";
 
 const sxGrid: SxProps<Theme> = {
   borderRadius: 1,
   backgroundColor: "lightgrey",
 };
 
-function Item({ children }: { children: ReactNode }) {
-  const theme = useTheme();
-  const sxItem: SxProps<Theme> = {
-    border: 1,
-    borderRadius: 1,
-    py: 0.5,
-    px: 1,
-    backgroundColor: theme.palette.background.default,
-  };
-  return <Box sx={sxItem}>{children}</Box>;
+function Item({ children, ...props }: TO<"div">) {
+  return (
+    <Box border={1} borderRadius={1} bgcolor="background.default" px={1} py={0.5} {...props}>
+      {children}
+    </Box>
+  );
+}
+
+function BasicGrid() {
+  return (
+    <Box flexGrow={1} p={1} sx={sxGrid}>
+      <Grid container spacing={1}>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+      </Grid>
+    </Box>
+  );
 }
 
 function GridFlex() {
@@ -32,31 +48,19 @@ function GridFlex() {
         </N>
       </H1>
       <P gutterBottom>
-        from <Link href="https://mui.com/material-ui/react-grid2/">Grid version 2 - Material UI</Link>
+        from <Link href="https://mui.com/material-ui/react-grid/">React Grid component - Material UI</Link>
       </P>
       <H2 gutterBottom mt={3}>
-        Fluid grids
+        Basic Grid
       </H2>
-      <Grid container spacing={2} sx={sxGrid}>
-        <Grid xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-        <Grid xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid xs={8}>
-          <Item>xs=8</Item>
-        </Grid>
-      </Grid>
+      <BasicGrid />
       <H2 gutterBottom mt={4}>
         Flex layout
       </H2>
-      <Box display="flex" alignItems="center" sx={sxGrid}>
+      <Box display="flex" alignItems="center" p={1} sx={sxGrid}>
         <Item>item</Item>
-        <Item>item</Item>
+        <Item flexGrow={1}>item</Item>
+        <Item flexGrow={2}>item</Item>
       </Box>
 
       <H2 gutterBottom mt={4}>

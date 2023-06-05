@@ -10,7 +10,7 @@ import Nav from "./components/Nav";
 import Types from "./components/Types";
 import theme from "./theme";
 import MenuIcon from "@mui/icons-material/Menu";
-import NavList from "./components/NavLList";
+import NavList1 from "./components/NavList1";
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
               <Route path="emotion1" element={<Emotion1 />} />
               <Route path="gridflex" element={<GridFlex />} />
               <Route path="ex1" element={<Ex1 />} />
-              <Route path="navlist" element={<NavList />} />
+              <Route path="navlist1" element={<NavList1 />} />
             </Route>
           </Routes>
         </Box>

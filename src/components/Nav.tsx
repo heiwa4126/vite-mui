@@ -27,6 +27,10 @@ function Nav() {
       <Link sx={sx1} href="/ex1">
         ex1
       </Link>
+      <D1 />
+      <Link sx={sx1} href="/navlist">
+        navlist
+      </Link>
     </Stack>
   );
 }

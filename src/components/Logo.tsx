@@ -11,3 +11,5 @@ export function Logo({ ...props }: TO<"h6">) {
     </Typography>
   );
 }
+
+export default Logo;

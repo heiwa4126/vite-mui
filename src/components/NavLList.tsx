@@ -54,14 +54,25 @@ function NavList() {
       </Link>
       <Divider />
 
-      <Link href="/navlist1">
+      <Link href="/nav">
         <ListItem>
           <ListItemIcon>
             <InsertEmoticonIcon />
           </ListItemIcon>
-          <ListItemText primary="navlist1" />
+          <ListItemText primary="nav" />
         </ListItem>
       </Link>
+      <Divider />
+
+      <Link href="/navlist">
+        <ListItem>
+          <ListItemIcon>
+            <InsertEmoticonIcon />
+          </ListItemIcon>
+          <ListItemText primary="navlist" />
+        </ListItem>
+      </Link>
+      <Divider />
     </List>
   );
 }

@@ -2,6 +2,7 @@ import { Box, Button, Link, SxProps, Theme, Typography } from "@mui/material";
 import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
+import Nav from "./Nav";
 
 const sxLogo: SxProps<Theme> = {
   height: "10em",
@@ -39,6 +40,8 @@ function App1() {
 
   return (
     <Box textAlign="center">
+      <Nav />
+
       <Box>
         <Link href="https://vitejs.dev" target="_blank">
           <Box component="img" src={viteLogo} sx={sxVite} alt="Vite logo" />

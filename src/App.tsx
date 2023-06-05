@@ -2,14 +2,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { AppBar, Box, Container, CssBaseline, Drawer, IconButton, Toolbar } from "@mui/material";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { Route, Routes } from "react-router-dom";
-import App1 from "./components/App1";
-import Emotion1 from "./components/Emotion1";
-import Ex1 from "./components/Ex1";
-import GridFlex from "./components/GridFlex";
 import Logo from "./components/Logo";
-import Nav from "./components/Nav";
 import NavList from "./components/NavLList";
-import Types from "./components/Types";
+import pages from "./pages";
 import useNav from "./states/navState";
 import theme from "./theme";
 
@@ -66,13 +61,9 @@ function App() {
         <Box pt={7.5} pb={1} component="main">
           <Routes>
             <Route path="/">
-              <Route index element={<App1 />} />
-              <Route path="types" element={<Types />} />
-              <Route path="emotion1" element={<Emotion1 />} />
-              <Route path="gridflex" element={<GridFlex />} />
-              <Route path="ex1" element={<Ex1 />} />
-              <Route path="nav" element={<Nav />} />
-              <Route path="navlist" element={<NavList />} />
+              {pages.map((page, idx) => {
+                return <Route key={idx} path={page.url} element={page.component} />;
+              })}
             </Route>
           </Routes>
         </Box>

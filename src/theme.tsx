@@ -29,15 +29,16 @@ const theme = createTheme({
   },
   palette: {
     // mode: "dark",
-    // primary: {
-    //   main: "#556cd6",
-    // },
-    // secondary: {
-    //   main: "#19857b",
-    // },
-    // error: {
-    //   main: red.A400,
-    // },
+    // <https://zenoo.github.io/mui-theme-creator/>
+    primary: {
+      main: "#1f791f",
+    },
+    secondary: {
+      main: "#e00404",
+    },
+    error: {
+      main: "#f47336",
+    },
   },
 });
 

@@ -7,6 +7,7 @@ import NavList from "./components/NavLList";
 import pages from "./pages";
 import useNav from "./states/navState";
 import theme from "./theme";
+import ScrollTop from "./components/ScrollTop";
 
 function NavButton() {
   const { setOpen } = useNav();
@@ -58,6 +59,7 @@ function App() {
       </AppBar>
       {/* ----------------------- */}
       <Container maxWidth="lg" id="back-to-top-anchor">
+        <ScrollTop />
         <Box pt={7.5} pb={1} component="main">
           <Routes>
             <Route path="/">

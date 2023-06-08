@@ -3,7 +3,7 @@ import { AppBar, Box, Container, CssBaseline, Drawer, IconButton, Toolbar } from
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
-import NavList from "./components/NavLList";
+import NavList from "./components/NavList";
 import pages from "./pages";
 import useNav from "./states/navState";
 import theme from "./theme";

@@ -118,7 +118,7 @@ function Ex1() {
           もう一度問い合わせ
         </Button>
       </Box>
-      <Spinner mt={2}>Loading...</Spinner>
+      <Spinner mt={2}>dummy...</Spinner>
     </>
   );
 }

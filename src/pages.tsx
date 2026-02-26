@@ -10,20 +10,20 @@ import Types from "./components/Types";
 // const NavList = lazy(() => import("./components/NavList"));
 
 export interface page {
-  label: string;
-  url: string;
-  component: ReactElement;
-  icon?: ReactElement;
+	label: string;
+	url: string;
+	component: ReactElement;
+	icon?: ReactElement;
 }
 
 const pages: page[] = [
-  { label: "home", url: "/", component: <App1 />, icon: <HouseOutlinedIcon /> },
-  { label: "types", component: <Types />, url: "/types" },
-  { label: "Grid & Flex", component: <GridFlex />, url: "/gridflex" },
-  { label: "emotion1", component: <Emotion1 />, url: "/emotion1" },
-  { label: "example1", component: <Ex1 />, url: "/ex1" },
-  // { label: "nav", component: <Nav />, url: "/nav" },
-  // { label: "navlist", component: <NavList />, url: "/navlist" },
+	{ label: "home", url: "/", component: <App1 />, icon: <HouseOutlinedIcon /> },
+	{ label: "types", component: <Types />, url: "/types" },
+	{ label: "Grid & Flex", component: <GridFlex />, url: "/gridflex" },
+	{ label: "emotion1", component: <Emotion1 />, url: "/emotion1" },
+	{ label: "example1", component: <Ex1 />, url: "/ex1" },
+	// { label: "nav", component: <Nav />, url: "/nav" },
+	// { label: "navlist", component: <NavList />, url: "/navlist" },
 ];
 
 export default pages;

@@ -1,4 +1,5 @@
 import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
+import { ReactElement } from "react";
 // import { lazy } from "react";
 import App1 from "./components/App1";
 import Emotion1 from "./components/Emotion1";
@@ -11,8 +12,8 @@ import Types from "./components/Types";
 export interface page {
   label: string;
   url: string;
-  component: JSX.Element;
-  icon?: JSX.Element;
+  component: ReactElement;
+  icon?: ReactElement;
 }
 
 const pages: page[] = [

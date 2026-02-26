@@ -1,6 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { AppBar, Box, Container, CssBaseline, Drawer, IconButton, Toolbar } from "@mui/material";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import { AppBar, Box, Container, CssBaseline, Drawer, IconButton, Toolbar, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";
 import NavList from "./components/NavList";

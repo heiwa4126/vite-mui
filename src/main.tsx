@@ -5,9 +5,9 @@ import App from "./App.tsx";
 import { HashRouter as Router } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>
+	<React.StrictMode>
+		<Router>
+			<App />
+		</Router>
+	</React.StrictMode>,
 );

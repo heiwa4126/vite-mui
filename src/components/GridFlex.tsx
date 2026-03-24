@@ -20,14 +20,7 @@ const sxGrid: SxProps<Theme> = {
 
 function Item({ children, ...props }: TO<"div">) {
 	return (
-		<Box
-			border={1}
-			borderRadius={1}
-			bgcolor="background.default"
-			px={1}
-			py={0.5}
-			{...props}
-		>
+		<Box border={1} borderRadius={1} bgcolor="background.default" px={1} py={0.5} {...props}>
 			{children}
 		</Box>
 	);
@@ -89,13 +82,7 @@ function GridFlex() {
 			<FormControl fullWidth>
 				<Box display="flex">
 					<InputLabel id="select1">Select one:</InputLabel>
-					<Select
-						sx={{ flexGrow: 1 }}
-						value={1}
-						id="select1"
-						label="Select one:"
-						size="small"
-					>
+					<Select sx={{ flexGrow: 1 }} value={1} id="select1" label="Select one:" size="small">
 						<MenuItem value={1} key={1} divider sx={{ color: "warning.main" }}>
 							MenuItem 1
 						</MenuItem>

@@ -1,9 +1,6 @@
 import { createTheme, LinkProps } from "@mui/material";
 import React from "react";
-import {
-	Link as RouterLink,
-	LinkProps as RouterLinkProps,
-} from "react-router-dom";
+import { Link as RouterLink, LinkProps as RouterLinkProps } from "react-router-dom";
 
 const LinkBehavior = React.forwardRef<
 	HTMLAnchorElement,
@@ -16,13 +13,7 @@ const LinkBehavior = React.forwardRef<
 
 const theme = createTheme({
 	typography: {
-		fontFamily: [
-			'"Noto Sans JP"',
-			"Roboto",
-			"Helvetica",
-			"Arial",
-			"sans-serif",
-		].join(","),
+		fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
 	},
 	components: {
 		MuiLink: {

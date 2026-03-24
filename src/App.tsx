@@ -72,9 +72,7 @@ function App() {
 					<Routes>
 						<Route path="/">
 							{pages.map((page, idx) => {
-								return (
-									<Route key={idx} path={page.url} element={page.component} />
-								);
+								return <Route key={idx} path={page.url} element={page.component} />;
 							})}
 						</Route>
 					</Routes>

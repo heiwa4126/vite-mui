@@ -1,6 +1,6 @@
 # vite-mui
 
-ReactでMUI (Material UI) の練習として
+React で MUI (Material UI) の練習として
 
 - [Install &amp; Setup Vite + React + Typescript + MUI 5 - Frontendshape](https://frontendshape.com/post/install-setup-vite-react-typescript-mui-5)
 - [Installation - Material UI](https://mui.com/material-ui/getting-started/installation/)
@@ -9,10 +9,10 @@ ReactでMUI (Material UI) の練習として
 
 をやってみた。
 
-出来たSPAは、GitHub Pagesの
+出来た SPA は、GitHub Pages の
 [Vite + React + TypeScript + MUI 5](https://heiwa4126.github.io/vite-mui/)
-を参照。 (gh-pagesブランチの更新がGitHub Actionsのトリガ)
+を参照。 (gh-pages ブランチの更新が GitHub Actions のトリガ)
 
 ## ロゴ
 
-ロゴ画像は [logoipsum](https://logoipsum.com/artwork/286) にあったやつを InkScapeで色を白くしたものです。
+ロゴ画像は [logoipsum](https://logoipsum.com/artwork/286) にあったやつを InkScape で色を白くしたものです。

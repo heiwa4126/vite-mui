@@ -60,7 +60,7 @@ function App() {
 				<Container maxWidth="lg">
 					<NavList1 />
 					<Toolbar disableGutters variant="dense">
-						<Logo mt={0.8} sx={{ flexGrow: 1 }} />
+						<Logo sx={{ mt: 0.8, flexGrow: 1 }} />
 						<NavButton />
 					</Toolbar>
 				</Container>
@@ -68,7 +68,7 @@ function App() {
 			{/* ----------------------- */}
 			<Container maxWidth="lg" id="back-to-top-anchor">
 				<ScrollTop />
-				<Box pt={7.5} pb={1} component="main">
+				<Box role="main" sx={{ pt: 7.5, pb: 1 }}>
 					<Routes>
 						<Route path="/">
 							{pages.map((page, idx) => {

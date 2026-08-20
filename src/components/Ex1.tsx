@@ -2,6 +2,7 @@ import DoubleArrowOutlined from "@mui/icons-material/DoubleArrowOutlined";
 import ReplayIcon from "@mui/icons-material/Replay";
 import {
 	Box,
+	BoxProps,
 	Button,
 	CircularProgress,
 	FormControl,
@@ -14,7 +15,7 @@ import {
 	Typography
 } from "@mui/material";
 import { ReactNode, useState } from "react";
-import { H1, P2, TOA } from "./Tags";
+import { H1, P2 } from "./Tags";
 import data from "./projects.json";
 
 const sxPreWrap: SxProps<Theme> = { whiteSpace: "pre-wrap" };
@@ -39,7 +40,7 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
 	const label = "プロジェクト名";
 	return (
 		<FormControl fullWidth>
-			<Box display="flex">
+			<Box sx={{ display: "flex" }}>
 				<InputLabel id="project">{label}</InputLabel>
 				<Select
 					sx={{ flexGrow: 1 }}
@@ -67,26 +68,26 @@ function Project3({ onSelect }: { onSelect: (selectedProject: Project) => void }
 	);
 }
 
-function Spinner({ children, ...props }: TOA) {
+function Spinner({ children, ...props }: BoxProps) {
 	return (
-		<Box display="flex" alignItems="center" {...props}>
+		<Box sx={{ display: "flex", alignItems: "center" }} {...props}>
 			<CircularProgress size="2em" />
-			<Typography color="primary" fontWeight={"bold"} ml={1.2} fontSize={15}>
+			<Typography color="primary" sx={{ fontWeight: "bold", ml: 1.2, fontSize: 15 }}>
 				{children}
 			</Typography>
 		</Box>
 	);
 }
 
-interface QABoxProps extends TOA {
+interface QABoxProps extends BoxProps {
 	children: ReactNode;
 	label: string;
 }
 
 function QABox({ children, label, ...props }: QABoxProps) {
 	return (
-		<Box component="fieldset" borderRadius={1} mx={-0.1} {...props}>
-			<legend>{label}</legend>
+		<Box role="group" aria-label={label} sx={{ borderRadius: 1, mx: -0.1 }} {...props}>
+			<Box>{label}</Box>
 			<Box sx={sxPreWrap}>{children}</Box>
 		</Box>
 	);
@@ -103,22 +104,22 @@ function Ex1() {
 					setProject(newProject);
 				}}
 			/>
-			<Box mt={1}>
+			<Box sx={{ mt: 1 }}>
 				<Button variant="contained" endIcon={<DoubleArrowOutlined />}>
 					もう一度問い合わせ
 				</Button>
 			</Box>
-			<QABox label="回答" mt={1}>{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
-			<P2 color="warning.main" mt={1} mb={0}>
+			<QABox label="回答" sx={{ mt: 1 }}>{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
+			<P2 color="warning.main" sx={{ mt: 1, mb: 0 }}>
 				※AIが生成した内容は不正確である場合があります。
 			</P2>
 			<QABox label="クエリ">{`ID: ${project?.id}\nNAME: ${project?.name}`}</QABox>
-			<Box mt={1.5}>
+			<Box sx={{ mt: 1.5 }}>
 				<Button variant="contained" endIcon={<DoubleArrowOutlined />}>
 					もう一度問い合わせ
 				</Button>
 			</Box>
-			<Spinner mt={2}>dummy...</Spinner>
+			<Spinner sx={{ mt: 2 }}>dummy...</Spinner>
 		</>
 	);
 }

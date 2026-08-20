@@ -1,4 +1,4 @@
-import { Box, Typography as T, Link } from "@mui/material";
+import { Box, Link, Typography as T } from "@mui/material";
 
 function Types() {
 	return (
@@ -37,16 +37,16 @@ function Types() {
 				unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
 				dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
 			</T>
-			<T variant="button" display="block" gutterBottom>
+			<T variant="button" sx={{ display: "block" }} gutterBottom>
 				button text
 			</T>
-			<T variant="caption" display="block" gutterBottom>
+			<T variant="caption" sx={{ display: "block" }} gutterBottom>
 				caption text
 			</T>
-			<T variant="overline" display="block" gutterBottom>
+			<T variant="overline" sx={{ display: "block" }} gutterBottom>
 				overline text
 			</T>
-			<T variant="body1" gutterBottom mt={4}>
+			<T variant="body1" gutterBottom sx={{ mt: 4 }}>
 				from{" "}
 				<Link href="https://mui.com/material-ui/react-typography/">
 					React Typography component - Material UI

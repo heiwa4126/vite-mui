@@ -1,8 +1,8 @@
 import { Box, Button, Link, SxProps, Theme, Typography } from "@mui/material";
 import { useState } from "react";
 import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
 import Nav from "./Nav";
+import viteLogo from "/vite.svg";
 
 const sxLogo: SxProps<Theme> = {
 	height: "10em",
@@ -39,7 +39,7 @@ function App1() {
 	const [count, setCount] = useState(0);
 
 	return (
-		<Box textAlign="center">
+		<Box sx={{ textAlign: "center" }}>
 			<Nav />
 
 			<Box>
@@ -50,10 +50,10 @@ function App1() {
 					<Box component="img" src={reactLogo} sx={sxReact} alt="React logo" />
 				</Link>
 			</Box>
-			<Typography component="h1" variant="h3" fontWeight={700}>
+			<Typography component="h1" variant="h3" sx={{ fontWeight: 700 }}>
 				Vite + React + TypeScript + MUI 5
 			</Typography>
-			<Box p="2em">
+			<Box sx={{ p: "2em" }}>
 				<Button variant="outlined" onClick={() => setCount((count) => count + 1)}>
 					count is {count}
 				</Button>

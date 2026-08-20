@@ -7,7 +7,7 @@ import {
 	Drawer,
 	IconButton,
 	ThemeProvider,
-	Toolbar,
+	Toolbar
 } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Logo from "./components/Logo";

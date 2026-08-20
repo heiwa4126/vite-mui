@@ -8,14 +8,14 @@ import {
 	MenuItem,
 	Select,
 	SxProps,
-	Theme,
+	Theme
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { H1, H2, N, P, S, TO } from "./Tags";
 
 const sxGrid: SxProps<Theme> = {
 	borderRadius: 1,
-	backgroundColor: "lightgrey",
+	backgroundColor: "lightgrey"
 };
 
 function Item({ children, ...props }: TO<"div">) {

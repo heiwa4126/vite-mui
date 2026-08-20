@@ -7,7 +7,7 @@ import { useScrollTrigger } from "@mui/material";
 export function ScrollTop() {
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
-		threshold: 80,
+		threshold: 80
 	});
 
 	const handleClick = () => {
@@ -25,7 +25,7 @@ export function ScrollTop() {
 				sx={{
 					position: "fixed",
 					bottom: (theme) => theme.spacing(1),
-					right: (theme) => theme.spacing(1),
+					right: (theme) => theme.spacing(1)
 				}}
 			>
 				<Fab size="small" color="primary" aria-label="scroll back to top">

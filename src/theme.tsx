@@ -13,33 +13,33 @@ const LinkBehavior = React.forwardRef<
 
 const theme = createTheme({
 	typography: {
-		fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),
+		fontFamily: ['"Noto Sans JP"', "Roboto", "Helvetica", "Arial", "sans-serif"].join(",")
 	},
 	components: {
 		MuiLink: {
 			defaultProps: {
-				component: LinkBehavior,
-			} as LinkProps,
+				component: LinkBehavior
+			} as LinkProps
 		},
 		MuiButtonBase: {
 			defaultProps: {
-				LinkComponent: LinkBehavior,
-			},
-		},
+				LinkComponent: LinkBehavior
+			}
+		}
 	},
 	palette: {
 		// mode: "dark",
 		// <https://zenoo.github.io/mui-theme-creator/>
 		primary: {
-			main: "#1f791f",
+			main: "#1f791f"
 		},
 		secondary: {
-			main: "#e00404",
+			main: "#e00404"
 		},
 		error: {
-			main: "#f47336",
-		},
-	},
+			main: "#f47336"
+		}
+	}
 });
 
 export default theme;

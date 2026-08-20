@@ -11,7 +11,7 @@ import {
 	SelectChangeEvent,
 	SxProps,
 	Theme,
-	Typography,
+	Typography
 } from "@mui/material";
 import { ReactNode, useState } from "react";
 import { H1, P2, TOA } from "./Tags";

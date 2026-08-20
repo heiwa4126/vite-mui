@@ -9,14 +9,14 @@ const sxLogo: SxProps<Theme> = {
 	padding: "1.5em",
 	marginTop: "3em",
 	willChange: "filter",
-	transition: "filter 300ms",
+	transition: "filter 300ms"
 };
 
 const sxVite: SxProps<Theme> = {
 	...sxLogo,
 	"&:hover": {
-		filter: "drop-shadow(0 0 2em #646cffaa)",
-	},
+		filter: "drop-shadow(0 0 2em #646cffaa)"
+	}
 };
 
 const sxReact: SxProps<Theme> = {
@@ -26,13 +26,13 @@ const sxReact: SxProps<Theme> = {
 		animation: "logo-spin infinite 20s linear",
 		"@keyframes logo-spin": {
 			from: {
-				transform: "rotate(0deg)",
+				transform: "rotate(0deg)"
 			},
 			to: {
-				transform: "rotate(360deg)",
-			},
-		},
-	},
+				transform: "rotate(360deg)"
+			}
+		}
+	}
 };
 
 function App1() {

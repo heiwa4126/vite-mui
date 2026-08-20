@@ -5,7 +5,7 @@ import {
 	ListItem,
 	ListItemButton,
 	ListItemIcon,
-	ListItemText,
+	ListItemText
 } from "@mui/material";
 import { Fragment } from "react";
 import pages, { page } from "../pages";

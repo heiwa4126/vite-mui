@@ -10,9 +10,9 @@ export const useNav = create<navState>()(
 	devtools((set) => {
 		return {
 			isOpen: false,
-			setOpen: (newState) => set({ isOpen: newState }),
+			setOpen: (newState) => set({ isOpen: newState })
 		};
-	}),
+	})
 );
 
 export default useNav;

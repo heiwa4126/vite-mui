@@ -17,35 +17,35 @@ export default ({ mode }) => {
 					minify: {
 						compress: {
 							dropConsole: true,
-							dropDebugger: true,
-						},
+							dropDebugger: true
+						}
 					},
 					codeSplitting: {
 						groups: [
 							{
 								name: "d",
 								test: /node_modules[\\/](react-dom|react-router-dom)([\\/]|$)/,
-								priority: 30,
+								priority: 30
 							},
 							{
 								name: "r",
 								test: /node_modules[\\/]react([\\/]|$)/,
-								priority: 20,
+								priority: 20
 							},
 							{
 								name: "e",
 								test: /node_modules[\\/]@emotion[\\/]/,
-								priority: 10,
+								priority: 10
 							},
 							{
 								name: "m",
 								test: /node_modules[\\/]@mui[\\/]material([\\/]|$)/,
-								priority: 5,
-							},
-						],
-					},
-				},
-			},
-		},
+								priority: 5
+							}
+						]
+					}
+				}
+			}
+		}
 	});
 };

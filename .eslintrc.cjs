@@ -3,16 +3,16 @@ module.exports = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:react-hooks/recommended",
+		"plugin:react-hooks/recommended"
 	],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaVersion: "latest",
 		sourceType: "module",
-		loggerFn: false, // when typescript 5.0.4 -> 5.1.3.
+		loggerFn: false // when typescript 5.0.4 -> 5.1.3.
 	},
 	plugins: ["react-refresh"],
 	rules: {
-		"react-refresh/only-export-components": "warn",
-	},
+		"react-refresh/only-export-components": "warn"
+	}
 };

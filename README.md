@@ -16,3 +16,11 @@ React で MUI (Material UI) の練習として
 ## ロゴ
 
 ロゴ画像は [logoipsum](https://logoipsum.com/artwork/286) にあったやつを InkScape で色を白くしたものです。
+
+## Vite+ に変えた (2026-10)
+
+```sh
+vp i
+vp dev
+vp build && vp preview
+```
